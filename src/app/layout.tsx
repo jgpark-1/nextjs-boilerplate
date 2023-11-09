@@ -4,17 +4,11 @@ import { initTheme } from "@/utils/theme";
 
 import "./globals.css";
 
-import { Montserrat, Merriweather } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 
-const merriweather = Merriweather({
-  weight: ["300", "400", "700", "900"],
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-merriweather",
-});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat",
+  variable: "--font-spaceGrotesk",
 });
 
 export const metadata = {
@@ -25,7 +19,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html className="dark" lang="ko">
-      <body className={clsx(montserrat.variable, merriweather.variable, "bg-white", "dark:bg-zinc-800 dark:text-gray-100")}>
+      <body className={clsx(spaceGrotesk.variable, "bg-white", "dark:bg-zinc-800 dark:text-gray-100")}>
         <script
           dangerouslySetInnerHTML={{
             __html: `(function() {
@@ -34,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             })()`,
           }}
         />
-        {children}
+        <main className="w-full h-screen">{children}</main>
       </body>
     </html>
   );

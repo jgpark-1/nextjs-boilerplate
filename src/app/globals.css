@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 * {
-  font-family: var(--font-montserrat), var(--font-merriweather);
+  font-family: var(--font-spaceGrotesk), sans-serif;
 }
