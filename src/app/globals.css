@@ -5,3 +5,9 @@
 * {
   font-family: var(--font-spaceGrotesk), sans-serif;
 }
+
+button {
+  &:focus {
+    outline: 0;
+  }
+}
