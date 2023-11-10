@@ -20,14 +20,29 @@ const environments = [
     imgAlt: "Typescript icon",
   },
   {
+    key: "Radix UI",
+    imgSrc: "/intro/Radix.svg",
+    imgAlt: "Radix UI icon",
+  },
+  {
     key: "Bundle analyzer",
     imgSrc: "/intro/analyzer.svg",
     imgAlt: "Bundle analyzer icon",
   },
   {
-    key: "Testing Library",
+    key: "Jest & React Testing Library",
     imgSrc: "/intro/jest.svg",
-    imgAlt: "Testing Library icon",
+    imgAlt: "Jest icon",
+  },
+  {
+    key: "Recoil",
+    imgSrc: "/intro/recoil.svg",
+    imgAlt: "Recoil icon",
+  },
+  {
+    key: "Storybook",
+    imgSrc: "/intro/Storybook.svg",
+    imgAlt: "Storybook icon",
   },
 ];
 
