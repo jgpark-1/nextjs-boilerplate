@@ -19,6 +19,16 @@ const environments = [
     imgSrc: "/intro/typescript.svg",
     imgAlt: "Typescript icon",
   },
+  {
+    key: "Bundle analyzer",
+    imgSrc: "/intro/analyzer.svg",
+    imgAlt: "Bundle analyzer icon",
+  },
+  {
+    key: "Testing Library",
+    imgSrc: "/intro/jest.svg",
+    imgAlt: "Testing Library icon",
+  }
 ];
 
 export default environments;
