@@ -12,7 +12,8 @@ module.exports = {
     extend: {
       colors: {
         "background-dark": "#10141b",
-        primary: "#2f58cd",
+        "primary": "#2f58cd",
+        "selection": "#6680c9",
       },
       contrast: {
         85: 0.85,

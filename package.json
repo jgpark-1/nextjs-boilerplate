@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write --ignore-unknown .",
-    "clean": "rimraf dist .next"
+    "clean": "rimraf dist .next",
+    "test": "jest --watch"
   },
   "dependencies": {
     "clsx": "^2.0.0",
@@ -21,6 +22,8 @@
   "devDependencies": {
     "@next/bundle-analyzer": "^14.0.2",
     "@svgr/webpack": "^8.1.0",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.1.0",
     "@types/node": "^20.7.1",
     "@types/react": "^18.2.23",
     "@types/react-dom": "^18.2.8",
@@ -29,6 +32,8 @@
     "eslint": "^8.42.0",
     "eslint-config-next": "^13.4.4",
     "eslint-config-prettier": "^9.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "postcss": "^8.4.23",
     "postcss-nesting": "^12.0.1",
     "prettier": "^2.8.8",

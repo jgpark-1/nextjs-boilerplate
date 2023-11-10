@@ -62,7 +62,7 @@ export default function Home() {
 
   return (
     <Fragment>
-      <div className={styles.container}>
+      <div className={clsx(styles.container, 'selection:bg-selection')}>
         <section className="w-full h-full">
           {!isTriggered && (
             <div className="relative z-10 flex items-center justify-center w-full h-full">
@@ -88,6 +88,7 @@ export default function Home() {
                         animate={isTriggered ? "visible" : "hidden"}
                         transition={{ staggerChildren: 0.1 }}
                         onAnimationComplete={handleAnimationComplete}
+                        aria-hidden
                       >
                         {title.split("").map((char, i) =>
                           char === " " ? (
