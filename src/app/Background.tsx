@@ -45,7 +45,7 @@ export default function Background({ isTriggered }: Props) {
         <div className="absolute inset-0 w-full h-full pointer-events-none">
           <div className={styles.videoWrapper}>
             <ReactPlayer
-              url="/intro/space.mp4"
+              url={["/intro/space.webp", "/intro/space.mp4"]}
               width="100%"
               height="100%"
               playing
