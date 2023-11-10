@@ -19,6 +19,7 @@
     "react-player": "^2.13.0"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^14.0.2",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^20.7.1",
     "@types/react": "^18.2.23",
