@@ -1,6 +1,6 @@
-import { render, screen } from '@testing-library/react'
-import Home from '../src/app/page'
-import '@testing-library/jest-dom'
+import { render, screen } from "@testing-library/react";
+import Home from "../src/app/page";
+import "@testing-library/jest-dom";
 
 export class IntersectionObserver {
   root = null;
@@ -23,17 +23,18 @@ export class IntersectionObserver {
     return null;
   }
 }
+
 window.IntersectionObserver = IntersectionObserver;
 global.IntersectionObserver = IntersectionObserver;
- 
-describe('Home', () => {
-  it('renders a heading', () => {
-    render(<Home />)
- 
-    const heading = screen.getByRole('heading', {
+
+describe("Home", () => {
+  it("renders a heading", () => {
+    render(<Home />);
+
+    const heading = screen.getByRole("heading", {
       name: /JG's Next.js Boilerplate/i,
-    })
- 
-    expect(heading).toBeInTheDocument()
-  })
-})
+    });
+
+    expect(heading).toBeInTheDocument();
+  });
+});
