@@ -28,7 +28,7 @@ const environments = [
     key: "Testing Library",
     imgSrc: "/intro/jest.svg",
     imgAlt: "Testing Library icon",
-  }
+  },
 ];
 
 export default environments;
