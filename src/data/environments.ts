@@ -1,7 +1,7 @@
 const environments = [
   {
     key: "Next.js",
-    imgSrc: "/intro/nexjs.svg",
+    imgSrc: "/intro/nextjs.svg",
     imgAlt: "Next.js icon",
   },
   {
@@ -16,7 +16,7 @@ const environments = [
   },
   {
     key: "Typescript",
-    imgSrc: "/intro/Typescript.svg",
+    imgSrc: "/intro/typescript.svg",
     imgAlt: "Typescript icon",
   },
 ];
