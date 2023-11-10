@@ -53,7 +53,7 @@ export default function Background({ isTriggered }: Props) {
               loop
               playsinline
               playbackRate={playbackRate}
-              style={{ backgroundImage: "url(/intro/space.png)" }}
+              style={{ backgroundImage: "url(/intro/space.png)", backgroundPosition: "50%" }}
             />
           </div>
         </div>
@@ -61,5 +61,5 @@ export default function Background({ isTriggered }: Props) {
     );
   }
 
-  return <div className="absolute inset-0 w-full h-full" style={{ backgroundImage: "url(/intro/space.png)" }} />;
+  return <div className="absolute inset-0 w-full h-full" style={{ backgroundImage: "url(/intro/space.png)", backgroundPosition: "50%" }} />;
 }
