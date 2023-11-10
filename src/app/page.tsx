@@ -13,10 +13,13 @@ import clsx from "clsx";
 
 import Background from "./Background";
 
+import ScrollDown from "@/components/arrows/ScrollDown";
+
 import styles from "./page.module.scss";
 
 export default function Home() {
   const [isTriggered, setIsTriggered] = useState(false);
+  const [isCompleted, setIsCompleted] = useState(false);
 
   const onStartClick = () => {
     setIsTriggered(true);
@@ -42,6 +45,21 @@ export default function Home() {
     console.log("Element is in view: ", isInView);
   }, [isInView]);
 
+  const handleAnimationComplete = (animation: string | string[]) => {
+    if (animation === "visible") {
+      setIsCompleted(true);
+    }
+  };
+
+  const defaultArrowAnimations = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+    },
+  };
+
   return (
     <Fragment>
       <div className={styles.container}>
@@ -58,8 +76,8 @@ export default function Home() {
             </div>
           )}
           <div className={clsx("w-full", "h-full", { ["hidden"]: !isTriggered, ["block"]: isTriggered })}>
-            <article className="w-full, h-full">
-              <div className="relative z-10 flex items-center justify-center w-full h-full">
+            <article className="w-full h-full">
+              <div className="relative flex items-center justify-center w-full h-full">
                 <div className="w-full h-full mx-auto max-w-7xl">
                   <div className="flex flex-col items-center justify-center w-full h-full">
                     <Fragment>
@@ -69,6 +87,7 @@ export default function Home() {
                         initial="hidden"
                         animate={isTriggered ? "visible" : "hidden"}
                         transition={{ staggerChildren: 0.1 }}
+                        onAnimationComplete={handleAnimationComplete}
                       >
                         {title.split("").map((char, i) =>
                           char === " " ? (
@@ -80,17 +99,27 @@ export default function Home() {
                           )
                         )}
                       </motion.div>
+                      <motion.div
+                        className="absolute bottom-24"
+                        initial="hidden"
+                        animate={isCompleted ? "visible" : "hidden"}
+                        transition={{ delayChildren: 0.25 }}
+                      >
+                        <motion.div variants={defaultArrowAnimations}>
+                          <ScrollDown />
+                        </motion.div>
+                      </motion.div>
                     </Fragment>
                   </div>
                 </div>
               </div>
             </article>
             <article className="w-full h-full">
-              <div className="w-full mx-auto max-w-8xl h-3/4">
+              <div className="w-full py-12 mx-auto max-w-8xl h-3/4">
                 <div className="w-full h-full">
-                  <motion.div className="text-xl text-center mb-14 text-neutral-300">
+                  <div className="text-xl text-center mb-14 text-neutral-300">
                     <p>Boilerplate for front-end development. The following environments is configured.</p>
-                  </motion.div>
+                  </div>
                   <motion.div
                     className="grid w-full h-full grid-cols-3 grid-rows-3 gap-6"
                     ref={ref}
