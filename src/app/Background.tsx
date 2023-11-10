@@ -26,7 +26,7 @@ export default function Background({ isTriggered }: Props) {
 
     const reset = setTimeout(() => {
       setPlaybackRate(1);
-    }, 1500);
+    }, 2000);
 
     return function cleaning() {
       if (isTriggered) {
