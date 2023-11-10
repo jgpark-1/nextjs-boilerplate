@@ -21,7 +21,7 @@ const environments = [
   },
   {
     key: "Radix UI",
-    imgSrc: "/intro/Radix.svg",
+    imgSrc: "/intro/radix.svg",
     imgAlt: "Radix UI icon",
   },
   {
@@ -41,7 +41,7 @@ const environments = [
   },
   {
     key: "Storybook",
-    imgSrc: "/intro/Storybook.svg",
+    imgSrc: "/intro/storybook.svg",
     imgAlt: "Storybook icon",
   },
 ];
