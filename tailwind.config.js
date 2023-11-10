@@ -17,6 +17,9 @@ module.exports = {
       contrast: {
         85: 0.85,
       },
+      maxWidth: {
+        "8xl": "96rem"
+      }
     },
   },
   plugins: [],
