@@ -67,8 +67,8 @@ export default function Home() {
                       <motion.div
                         className="mb-6 text-2xl font-medium tracking-wider text-center"
                         initial="hidden"
-                        animate="visible"
-                        transition={{ staggerChildren: 0.1, delayChildren: 2.5 }}
+                        animate={isTriggered ? "visible" : "hidden"}
+                        transition={{ staggerChildren: 0.1 }}
                       >
                         {title.split("").map((char, i) =>
                           char === " " ? (
