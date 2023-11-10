@@ -18,8 +18,8 @@ module.exports = {
         85: 0.85,
       },
       maxWidth: {
-        "8xl": "96rem"
-      }
+        "8xl": "96rem",
+      },
     },
   },
   plugins: [],
