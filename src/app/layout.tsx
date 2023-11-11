@@ -1,5 +1,7 @@
 import clsx from "clsx";
 
+import { CustomProvider } from "@/state/store";
+
 import { initTheme } from "@/utils/theme";
 
 import "./globals.css";
@@ -28,7 +30,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             })()`,
           }}
         />
-        <main className="w-full h-screen">{children}</main>
+        <CustomProvider>
+          <main className="w-full h-screen">{children}</main>
+        </CustomProvider>
       </body>
     </html>
   );

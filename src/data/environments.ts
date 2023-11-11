@@ -35,9 +35,9 @@ const environments = [
     imgAlt: "Jest icon",
   },
   {
-    key: "Recoil",
-    imgSrc: "/intro/recoil.svg",
-    imgAlt: "Recoil icon",
+    key: "Jotai",
+    imgSrc: "/intro/jotai.svg",
+    imgAlt: "Jotai icon",
   },
   {
     key: "Storybook",
