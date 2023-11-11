@@ -20,6 +20,7 @@ import styles from "./page.module.scss";
 export default function Home() {
   const [isTriggered, setIsTriggered] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
+  const [isScrollable, setIsScrollable] = useState(false);
 
   const onStartClick = () => {
     setIsTriggered(true);
@@ -39,7 +40,7 @@ export default function Home() {
   const title = "JG's Next.js Boilerplate";
 
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.2, once: true });
+  const isInView = useInView(ref, { amount: 0.5, once: true });
 
   useEffect(() => {
     console.log("Element is in view: ", isInView);
@@ -60,9 +61,15 @@ export default function Home() {
     },
   };
 
+  const handleScrollDownLoad = (animation: string | string[]) => {
+    if (animation === "visible") {
+      setIsScrollable(true);
+    }
+  }
+
   return (
     <Fragment>
-      <div className={clsx(styles.container, "selection:bg-selection")}>
+      <div className={clsx(styles.container, "selection:bg-selection", {[styles.scrollY]: isScrollable})}>
         <section className="w-full h-full">
           {!isTriggered && (
             <div className="relative z-10 flex items-center justify-center w-full h-full">
@@ -105,6 +112,7 @@ export default function Home() {
                         initial="hidden"
                         animate={isCompleted ? "visible" : "hidden"}
                         transition={{ delayChildren: 0.25 }}
+                        onAnimationComplete={handleScrollDownLoad}
                       >
                         <motion.div variants={defaultArrowAnimations}>
                           <ScrollDown />
