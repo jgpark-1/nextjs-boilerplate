@@ -62,7 +62,7 @@ export default function Home() {
 
   return (
     <Fragment>
-      <div className={clsx(styles.container, 'selection:bg-selection')}>
+      <div className={clsx(styles.container, "selection:bg-selection")}>
         <section className="w-full h-full">
           {!isTriggered && (
             <div className="relative z-10 flex items-center justify-center w-full h-full">
