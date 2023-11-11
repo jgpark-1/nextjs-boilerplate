@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["next", "prettier"],
+  extends: ["next", "prettier", "plugin:storybook/recommended"],
   plugins: ["@typescript-eslint"],
   rules: {
     "prefer-const": "error",
