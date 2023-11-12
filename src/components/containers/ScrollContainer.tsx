@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
 import { Fragment, ReactNode, useEffect, useRef, useState } from "react";
 
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 import useWindowSize from "@/hooks/useWindowSize";
 
-import styles from './ScrollContainer.module.scss';
+import styles from "./ScrollContainer.module.scss";
 
 export default function ScrollContainer({ children }: { children: ReactNode }) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -16,16 +16,16 @@ export default function ScrollContainer({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (containerRef.current) {
-      setContentHeight(containerRef.current.scrollHeight)
+      setContentHeight(containerRef.current.scrollHeight);
     }
-  }, [children, containerRef])
+  }, [children, containerRef]);
 
   const { scrollY } = useScroll();
 
   const smoothProgress = useSpring(scrollY, { mass: 0.1 });
 
-  const y = useTransform(smoothProgress, value => {
-    return -value
+  const y = useTransform(smoothProgress, (value) => {
+    return -value;
   });
 
   return (
@@ -35,5 +35,5 @@ export default function ScrollContainer({ children }: { children: ReactNode }) {
         {children}
       </motion.div>
     </Fragment>
-  )
+  );
 }
