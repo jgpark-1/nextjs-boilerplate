@@ -3,10 +3,6 @@
   height: 100%;
   overflow-y: hidden;
 
-  &::-webkit-scrollbar {
-    width: 0;
-  }
-
   &.scrollY {
     overflow-y: auto;
   }
