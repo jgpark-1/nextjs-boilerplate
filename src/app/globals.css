@@ -6,6 +6,18 @@
   font-family: var(--font-spaceGrotesk), sans-serif;
 }
 
+body {
+  overflow-y: hidden;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &.scroll {
+    overflow-y: auto;
+  }
+}
+
 button {
   &:focus {
     outline: 0;

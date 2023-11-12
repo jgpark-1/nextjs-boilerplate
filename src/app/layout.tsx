@@ -21,7 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html className="dark" lang="ko">
-      <body className={clsx(spaceGrotesk.variable, "bg-white", "dark:bg-zinc-800 dark:text-gray-100")}>
+      <body className={clsx(spaceGrotesk.variable, "bg-white", "dark:bg-zinc-800 dark:text-gray-100")} id="body">
         <script
           dangerouslySetInnerHTML={{
             __html: `(function() {
@@ -31,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         <CustomProvider>
-          <main className="w-full h-screen">{children}</main>
+          <main>{children}</main>
         </CustomProvider>
       </body>
     </html>
