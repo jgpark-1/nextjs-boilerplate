@@ -11,14 +11,14 @@ import styles from "./ScrollContainer.module.scss";
 export default function ScrollContainer({ children }: { children: ReactNode }) {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const { height } = useWindowSize();
+  const { width, height } = useWindowSize();
   const [contentHeight, setContentHeight] = useState(height);
 
   useEffect(() => {
     if (containerRef.current) {
       setContentHeight(containerRef.current.scrollHeight);
     }
-  }, [children, containerRef]);
+  }, [children, containerRef, width, height]);
 
   const { scrollY } = useScroll();
 
