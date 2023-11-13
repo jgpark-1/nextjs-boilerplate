@@ -1,5 +1,5 @@
 import { atom } from "jotai";
 
-export const introAtom = atom({
+export const loadingAtom = atom({
   isStarted: false,
 });

@@ -1,10 +1,9 @@
 import clsx from "clsx";
 
 import { CustomProvider } from "@/state/store";
-
 import { initTheme } from "@/utils/theme";
 
-import "./globals.css";
+import "./_styles/globals.css";
 
 import { Space_Grotesk } from "next/font/google";
 
@@ -30,9 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             })()`,
           }}
         />
-        <CustomProvider>
-          <main>{children}</main>
-        </CustomProvider>
+        <CustomProvider>{children}</CustomProvider>
       </body>
     </html>
   );
