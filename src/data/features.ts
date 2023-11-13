@@ -1,4 +1,4 @@
-const environments = [
+const features = [
   {
     key: "Next.js",
     imgSrc: "/intro/nextjs.svg",
@@ -46,4 +46,4 @@ const environments = [
   },
 ];
 
-export default environments;
+export default features;
