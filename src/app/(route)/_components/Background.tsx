@@ -4,13 +4,14 @@ import { useEffect, useState } from "react";
 
 import ReactPlayer from "react-player";
 
+import { useAtomValue } from "jotai";
+import { loadingAtom } from "@/state/atom/loading";
+
 import styles from "./Background.module.scss";
 
-type Props = {
-  isTriggered: boolean;
-};
+export default function Background() {
+  const { isStarted } = useAtomValue(loadingAtom);
 
-export default function Background({ isTriggered }: Props) {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -20,7 +21,7 @@ export default function Background({ isTriggered }: Props) {
   const [playbackRate, setPlaybackRate] = useState(1);
 
   useEffect(() => {
-    if (isTriggered) {
+    if (isStarted) {
       setPlaybackRate(5);
     }
 
@@ -29,15 +30,15 @@ export default function Background({ isTriggered }: Props) {
     }, 2000);
 
     return function cleaning() {
-      if (isTriggered) {
+      if (isStarted) {
         reset;
       }
 
-      if (!isTriggered) {
+      if (!isStarted) {
         clearTimeout(reset);
       }
     };
-  }, [isTriggered]);
+  }, [isStarted]);
 
   if (isMounted) {
     return (
