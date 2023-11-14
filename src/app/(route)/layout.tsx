@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { CustomProvider } from "@/state/store";
 import { initTheme } from "@/utils/theme";
 
-import "./_styles/globals.css";
+import "@/app/globals.css";
 
 import { Space_Grotesk } from "next/font/google";
 
