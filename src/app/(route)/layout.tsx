@@ -1,7 +1,7 @@
 import clsx from "clsx";
 
 import { CustomProvider } from "@/state/store";
-import { initTheme } from "@/utils/theme";
+import { initTheme } from "@/lib/theme";
 
 import "@/app/globals.css";
 
