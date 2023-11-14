@@ -20,9 +20,9 @@ const features = [
     imgAlt: "Typescript icon",
   },
   {
-    key: "Radix UI",
-    imgSrc: "/intro/radix.svg",
-    imgAlt: "Radix UI icon",
+    key: "Shadcn UI",
+    imgSrc: "/intro/shadcnui.svg",
+    imgAlt: "Shadcn ui icon",
   },
   {
     key: "Bundle analyzer",
