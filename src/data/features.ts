@@ -20,7 +20,7 @@ const features = [
     imgAlt: "Typescript icon",
   },
   {
-    key: "shadcn/ui",
+    key: "Shadcn UI",
     imgSrc: "/intro/shadcnui.svg",
     imgAlt: "Shadcn ui icon",
   },
