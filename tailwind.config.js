@@ -20,6 +20,9 @@ module.exports = {
       maxWidth: {
         "8xl": "96rem",
       },
+      height: {
+        "screen-dvh": "100dvh"
+      }
     }
     // container: {
     //   center: true,

@@ -64,11 +64,11 @@ export default function Home() {
         <main>
           <section>
             <article>
-              <div className="h-screen mx-auto max-w-8xl">
+              <div className="px-4 mx-auto h-screen-dvh max-w-8xl sm:px-6 md:px-8">
                 <div className="relative flex flex-col items-center justify-center h-full">
                   <motion.h1 className="sr-only">{title}</motion.h1>
                   <motion.div
-                    className="mb-4 text-2xl font-medium tracking-wider text-center"
+                    className="mb-4 text-xl font-medium tracking-wider text-center sm:text-2xl"
                     initial="hidden"
                     animate={isStarted ? "visible" : "hidden"}
                     transition={{ staggerChildren: 0.1 }}
@@ -107,7 +107,7 @@ export default function Home() {
               </div>
             </article>
             <article>
-              <div className="h-screen mx-auto max-w-8xl">
+              <div className="px-4 mx-auto h-screen-dvh max-w-8xl sm:px-6 md:px-8">
                 <div className="relative flex flex-col items-center justify-center h-full">
                   <motion.div
                     className="grid w-full grid-cols-3 grid-rows-3 gap-x-6 gap-y-8"
