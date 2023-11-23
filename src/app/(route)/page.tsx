@@ -64,7 +64,7 @@ export default function Home() {
         <main>
           <section>
             <article>
-              <div className="h-screen mx-auto max-w-8xl">
+              <div className="mx-auto h-screen-dvh max-w-8xl">
                 <div className="relative flex flex-col items-center justify-center h-full">
                   <motion.h1 className="sr-only">{title}</motion.h1>
                   <motion.div
@@ -107,7 +107,7 @@ export default function Home() {
               </div>
             </article>
             <article>
-              <div className="h-screen mx-auto max-w-8xl">
+              <div className="mx-auto h-screen-dvh max-w-8xl">
                 <div className="relative flex flex-col items-center justify-center h-full">
                   <motion.div
                     className="grid w-full grid-cols-3 grid-rows-3 gap-x-6 gap-y-8"
