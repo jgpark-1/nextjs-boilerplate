@@ -42,8 +42,8 @@ export default function Background() {
 
   if (isMounted) {
     return (
-      <div className="fixed inset-0 w-full h-full -z-50">
-        <div className="fixed inset-0 w-full h-full pointer-events-none">
+      <div className="fixed inset-0 w-screen min-h-screen h-screen-dvh -z-50">
+        <div className="fixed inset-0 w-screen min-h-screen pointer-events-none h-screen-dvh">
           <div className={styles.videoWrapper}>
             <ReactPlayer
               url={["/intro/space.webp", "/intro/space.mp4"]}
@@ -62,5 +62,5 @@ export default function Background() {
     );
   }
 
-  return <div className="absolute inset-0 w-full h-full" style={{ backgroundImage: "url(/intro/space.png)", backgroundPosition: "50%" }} />;
+  return <div className="absolute inset-0 w-screen min-h-screen h-screen-dvh" style={{ backgroundImage: "url(/intro/space.png)", backgroundPosition: "50%" }} />;
 }
