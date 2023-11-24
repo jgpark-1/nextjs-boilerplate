@@ -32,7 +32,7 @@ export default function Home() {
   };
 
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.5, once: true });
+  const isInView = useInView(ref, { amount: 0.1, once: true });
 
   const handleTitleAnimationComplete = (animation: string | string[]) => {
     if (animation === "visible") {
@@ -59,7 +59,6 @@ export default function Home() {
 
   return (
     <Fragment>
-      {!isStarted && <Loading />}
       <ScrollContainer>
         <main>
           <section>
@@ -86,7 +85,7 @@ export default function Home() {
                     )}
                   </motion.div>
                   <motion.div
-                    className="text-lg text-center text-zinc-400 mb-14"
+                    className="text-sm text-center text-zinc-400 mb-14 sm:text-xl"
                     initial="hidden"
                     animate={isCompleted ? "visible" : "hidden"}
                   >
@@ -107,10 +106,10 @@ export default function Home() {
               </div>
             </article>
             <article>
-              <div className="px-4 mx-auto h-screen-dvh max-w-8xl sm:px-6 md:px-8">
-                <div className="relative flex flex-col items-center justify-center h-full">
+              <div className="px-4 mx-auto sm:h-screen-dvh max-w-8xl sm:px-6 md:px-8">
+                <div className="relative flex flex-col items-center justify-center h-auto sm:h-full">
                   <motion.div
-                    className="grid w-full grid-cols-3 grid-rows-3 gap-x-6 gap-y-8"
+                    className="grid w-full grid-cols-1 grid-rows-3 gap-x-6 gap-y-8 sm:grid-cols-3"
                     ref={ref}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
