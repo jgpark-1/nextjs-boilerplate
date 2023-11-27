@@ -63,7 +63,7 @@ export default function Home() {
         <main>
           <section>
             <article>
-              <div className="px-4 mx-auto h-screen-dvh max-w-8xl sm:px-6 md:px-8">
+              <div className="px-4 pb-4 mx-auto h-screen-dvh max-w-8xl sm:px-6 md:px-8">
                 <div className="relative flex flex-col items-center justify-center h-full">
                   <motion.h1 className="sr-only">{title}</motion.h1>
                   <motion.div
@@ -106,10 +106,10 @@ export default function Home() {
               </div>
             </article>
             <article>
-              <div className="px-4 mx-auto sm:h-screen-dvh max-w-8xl sm:px-6 md:px-8">
+              <div className="px-4 pb-4 mx-auto sm:h-screen-dvh max-w-8xl sm:px-6 md:px-8">
                 <div className="relative flex flex-col items-center justify-center h-auto sm:h-full">
                   <motion.div
-                    className="grid w-full grid-cols-1 grid-rows-3 gap-x-6 gap-y-8 sm:grid-cols-3"
+                    className="grid w-full grid-cols-1 grid-rows-3 gap-x-6 gap-y-10 sm:grid-cols-3"
                     ref={ref}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
@@ -117,7 +117,7 @@ export default function Home() {
                   >
                     {features.map((feature, i) => (
                       <motion.div
-                        className="flex flex-col items-center justify-center gap-6 p-6 overflow-hidden"
+                        className="flex flex-col items-center self-start justify-center gap-6 p-6 overflow-hidden"
                         key={`${feature}_${i}`}
                         variants={defaultAnimations}
                         transition={{ duration: 1.25 }}
@@ -125,8 +125,13 @@ export default function Home() {
                         <div className="flex items-center justify-center w-16 h-16 rounded-md bg-primary">
                           <Image src={feature.imgSrc} alt={feature.imgAlt} width={36} height={36} />
                         </div>
-                        <div className="text-xl">
-                          <p>{feature.key}</p>
+                        <div className="flex flex-col text-center gap-y-4">
+                          <div className="text-base sm:text-xl">
+                            <p>{feature.key}</p>
+                          </div>
+                          <div className="text-sm text-gray-400 sm:text-base">
+                            <p>{feature.description}</p>
+                          </div>
                         </div>
                       </motion.div>
                     ))}
