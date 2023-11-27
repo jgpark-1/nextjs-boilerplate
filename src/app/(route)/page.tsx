@@ -109,7 +109,7 @@ export default function Home() {
               <div className="px-4 pb-4 mx-auto sm:h-screen-dvh max-w-8xl sm:px-6 md:px-8">
                 <div className="relative flex flex-col items-center justify-center h-auto sm:h-full">
                   <motion.div
-                    className="grid w-full grid-cols-1 grid-rows-3 gap-x-6 gap-y-10 sm:grid-cols-3"
+                    className="grid w-full grid-cols-1 grid-rows-3 gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-3"
                     ref={ref}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
