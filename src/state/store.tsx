@@ -2,11 +2,11 @@
 
 import { ReactNode } from "react";
 
-import { Provider, createStore } from "jotai";
+import { Provider, getDefaultStore } from "jotai";
 
 import { loadingAtom } from "./atom/loading";
 
-const store = createStore();
+const store = getDefaultStore();
 store.set(loadingAtom, { isStarted: false });
 
 export const CustomProvider = ({ children }: { children: ReactNode }) => {
