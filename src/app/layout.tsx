@@ -1,7 +1,7 @@
 import clsx from "clsx";
 
+import { ThemeProvider } from "@/components/provider/theme-provider";
 import { CustomProvider } from "@/state/store";
-import { initTheme } from "@/lib/theme";
 
 import "@/app/globals.css";
 
@@ -19,17 +19,11 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html className="dark" lang="ko">
+    <html lang="ko">
       <body className={clsx(spaceGrotesk.variable, "bg-white", "dark:bg-zinc-800 dark:text-gray-100")} id="body">
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function() {
-              ${initTheme.toString()}
-              initTheme();
-            })()`,
-          }}
-        />
-        <CustomProvider>{children}</CustomProvider>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+          <CustomProvider>{children}</CustomProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
