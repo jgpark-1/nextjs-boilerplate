@@ -62,5 +62,10 @@ export default function Background() {
     );
   }
 
-  return <div className="absolute inset-0 w-screen min-h-screen h-screen-dvh" style={{ backgroundImage: "url(/intro/space.png)", backgroundPosition: "50%" }} />;
+  return (
+    <div
+      className="absolute inset-0 w-screen min-h-screen h-screen-dvh"
+      style={{ backgroundImage: "url(/intro/space.png)", backgroundPosition: "50%" }}
+    />
+  );
 }

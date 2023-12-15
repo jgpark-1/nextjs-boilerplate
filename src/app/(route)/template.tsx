@@ -17,7 +17,7 @@ export default function Template({ children }: { children: ReactNode }) {
         <Loading />
         <Background />
       </Fragment>
-    )
+    );
   }
 
   return (

@@ -3,20 +3,20 @@ type Feature = {
   imgSrc: string;
   imgAlt: string;
   description: string;
-}
+};
 
 const features: Feature[] = [
   {
     key: "Next.js",
     imgSrc: "/intro/nextjs.svg",
     imgAlt: "Next.js icon",
-    description: "Offers improved developer experience for building applications."
+    description: "Offers improved developer experience for building applications.",
   },
   {
     key: "Tailwind",
     imgSrc: "/intro/tailwind.svg",
     imgAlt: "Tailwind icon",
-    description: "A utility-first CSS framework for rapid UI development."
+    description: "A utility-first CSS framework for rapid UI development.",
   },
   {
     key: "ESLint & Prettier",

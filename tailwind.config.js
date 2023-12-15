@@ -21,9 +21,9 @@ module.exports = {
         "8xl": "96rem",
       },
       height: {
-        "screen-dvh": "100dvh"
-      }
-    }
+        "screen-dvh": "100dvh",
+      },
+    },
     // container: {
     //   center: true,
     //   padding: "2rem",
