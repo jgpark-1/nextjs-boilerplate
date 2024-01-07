@@ -122,7 +122,7 @@ export default function Home() {
                         variants={defaultAnimations}
                         transition={{ duration: 1.25 }}
                       >
-                        <div className="flex items-center justify-center w-16 h-16 rounded-md bg-primary">
+                        <div className="flex items-center justify-center w-16 h-16 bg-blue-600 rounded-md">
                           <Image src={feature.imgSrc} alt={feature.imgAlt} width={36} height={36} />
                         </div>
                         <div className="flex flex-col text-center gap-y-4">
