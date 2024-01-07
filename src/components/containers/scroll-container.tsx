@@ -6,7 +6,7 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 import useWindowSize from "@/hooks/useWindowSize";
 
-import styles from "./ScrollContainer.module.scss";
+import styles from "./scroll-container.module.scss";
 
 export default function ScrollContainer({ children }: { children: ReactNode }) {
   const containerRef = useRef<HTMLDivElement>(null);

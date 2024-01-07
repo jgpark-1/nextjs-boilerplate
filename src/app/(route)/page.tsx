@@ -11,10 +11,10 @@ import { motion, useInView } from "framer-motion";
 import { useAtomValue } from "jotai";
 import { loadingAtom } from "@/state/atom/loading";
 
-import ScrollContainer from "@/components/containers/ScrollContainer";
-import ScrollDown from "@/components/arrows/ScrollDown";
+import ScrollContainer from "@/components/containers/scroll-container";
+import ScrollDown from "@/components/arrows/scroll-down";
 
-import Loading from "./_components/Loading";
+import Loading from "./_components/loading";
 
 export default function Home() {
   const { isStarted } = useAtomValue(loadingAtom);

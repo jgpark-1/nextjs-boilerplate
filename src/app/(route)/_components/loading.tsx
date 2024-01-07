@@ -3,7 +3,7 @@
 import { useSetAtom } from "jotai";
 import { loadingAtom } from "@/state/atom/loading";
 
-import styles from "./Loading.module.scss";
+import styles from "./loading.module.scss";
 
 export default function Loading() {
   const setIntroValue = useSetAtom(loadingAtom);

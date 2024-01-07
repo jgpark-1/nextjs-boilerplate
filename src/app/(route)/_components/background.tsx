@@ -7,7 +7,7 @@ import ReactPlayer from "react-player";
 import { useAtomValue } from "jotai";
 import { loadingAtom } from "@/state/atom/loading";
 
-import styles from "./Background.module.scss";
+import styles from "./background.module.scss";
 
 export default function Background() {
   const { isStarted } = useAtomValue(loadingAtom);
