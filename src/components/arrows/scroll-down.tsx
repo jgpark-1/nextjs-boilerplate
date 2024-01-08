@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-import styles from "./ScrollDown.module.scss";
+import styles from "./scroll-down.module.scss";
 
 export default function ScrollDown() {
   return (

@@ -20,7 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko">
-      <body className={clsx(spaceGrotesk.variable, "bg-white", "dark:bg-zinc-800 dark:text-gray-100")} id="body">
+      <body className={spaceGrotesk.variable} id="body">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <CustomProvider>{children}</CustomProvider>
         </ThemeProvider>
